@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->string('title'); //タイトル
+            $table->text('description')->nullable(); //詳細
+            $table->boolean("is_completed")->default(false); //完了したかどうか。
+            $table->date("due_date")->nullable(); //締め切り
             $table->timestamps();
+          
+
         });
     }
 
