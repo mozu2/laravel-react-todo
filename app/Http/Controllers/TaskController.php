@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use Inertia\Inertia; 
 
 class TaskController extends Controller
 {
     public function index(){
         return Inertia::render('Todo/Index',[
-            'todos' => Todo::latest()->get()
+            'todos' => Task::latest()->get()
         ]);
     }
 

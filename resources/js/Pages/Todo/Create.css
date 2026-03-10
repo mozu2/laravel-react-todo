@@ -13,7 +13,6 @@
 
 .createForm {
     background-color: aliceblue;
-    padding: 20px;
     border-radius: 10px;
     /*スマホ用 */
     width: 90%;
@@ -60,4 +59,9 @@
     height: 50px;
     margin-top: 10px;
     border-radius: 20px;
+}
+
+.createTitle {
+    font-size: 30px;
+    padding-bottom: 10px;
 }

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './Index.css';
 import Create from "./Create.jsx";
+import ShowTask from "./ShowTask.jsx";
 
 
-const Index = () => {
+const Index = ({ todos }) => {
 
     const [showCreate, setShowCreate] = useState(false);
 
@@ -12,13 +13,18 @@ const Index = () => {
     }
 
     return (
-        <div className='todo'>
-            <h1>To Do アプリ</h1>
-            <button className='createbtn' onClick={ShowCreate}>作成する</button>
-            {/*子コンポーネント(Create)にshowCreateをわたす */}
-            <Create showCreate={showCreate} setShowCreate={setShowCreate} />
+        <>
+            <div className='todo'>
+                <h1>To Do アプリ</h1>
+                <button className='createbtn' onClick={ShowCreate}>作成する</button>
 
-        </div>
+                <div>
+                    <ShowTask todos={todos} />
+                </div>
+                {/*子コンポーネント(Create)にshowCreateをわたす */}
+                <Create showCreate={showCreate} setShowCreate={setShowCreate} />
+            </div>
+        </>
     )
 }
 

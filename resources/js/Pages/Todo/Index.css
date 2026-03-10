@@ -2,7 +2,7 @@ body {
     background-color: darkgrey;
 }
 
-h1 {
+.todo h1 {
     font-size: 30px;
     margin: 100px auto;
 }

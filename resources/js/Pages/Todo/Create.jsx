@@ -16,7 +16,7 @@ const Create = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        post('/Todo', {
+        post('/', {
             onSuccess: () => {
                 closeCreate();
                 reset();
@@ -38,7 +38,7 @@ const Create = (props) => {
 
                     <form className="createForm" onSubmit={handleSubmit}>
                         <button onClick={closeCreate} className="clsbtn">×</button>
-                        <h1>入力してください</h1>
+                        <h1 className="createTitle">入力してください</h1>
                         <label className="title" >タイトル</label>
                         <input type="text" value={data.title} onChange={e => setData('title', e.target.value)} />
                         <label >いつまで</label>
